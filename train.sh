@@ -1,0 +1,25 @@
+accelerate train.py \
+  --pretrained_model_name_or_path="stabilityai/stable-diffusion-2-1-base"  \
+  --instance_data_dir=PATH_TO_DATA_FOLDER \
+  --output_dir="./output/wkwv/" \
+  --class_data_dir_1="./data/class_image" \
+  --instance_prompt="a photo of <new1> and <new2>" \
+  --object_list="<new1>+<new2>" \
+  --class_prompt_1="a photo at the beach" \
+  --with_prior_preservation --prior_loss_weight=1.0 \
+  --num_class_images=200 \
+  --resolution=512  \
+  --train_batch_size=1  \
+  --learning_rate=5e-5  \
+  --lr_warmup_steps=0 \
+  --max_train_steps=500 \
+  --checkpointing_steps=100 \
+  --scale_lr \
+  --modifier_token="<new1>+<new2>" \
+  --initializer_token="initilization token (e.g., cat+dog)" \
+  --report_to="wandb" \
+  --no_safe_serialization \
+  --noaug \
+  --train_v --train_k \
+  --ssim_threshold=0.8 \
+  --attention_threshold=0.1
