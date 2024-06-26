@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 from utils.CustomModelLoader_for_inference import CustomModelLoader
 
-from utils.CrossAttnMap_for_inference import AttentionStore
+from utils.CrossAttnMap import AttentionStore
 
 controller = AttentionStore(LOW_RESOURCE=False)
 controller.num_att_layers = 16
