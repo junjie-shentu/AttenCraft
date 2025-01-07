@@ -15,7 +15,7 @@ from diffusers.utils.logging import get_logger
 
 from diffusers.models.lora import LoRACompatibleConv, LoRACompatibleLinear, LoRAConv2dLayer, LoRALinearLayer
 
-from CustomAttnProcessor import CustomDiffusionAttnProcessor2_0 as CustomDiffusionAttnProcessor
+from utils.CustomAttnProcessor import CustomDiffusionAttnProcessor2_0 as CustomDiffusionAttnProcessor
 
 
 if is_accelerate_available():
