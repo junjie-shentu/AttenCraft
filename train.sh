@@ -1,4 +1,4 @@
-accelerate train.py \
+accelerate launch train.py \
   --pretrained_model_name_or_path="stabilityai/stable-diffusion-2-1-base"  \
   --instance_data_dir=PATH_TO_DATA_FOLDER \
   --output_dir="./output/wkwv/" \
